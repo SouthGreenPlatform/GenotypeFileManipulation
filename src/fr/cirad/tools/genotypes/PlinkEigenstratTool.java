@@ -205,7 +205,7 @@ public class PlinkEigenstratTool {
 				int nCurrentVariantIndex = 0;
 				for (String gtCode : individualGenotypes)
 				{
-					String variant = variants[nCurrentVariantIndex];
+					String variant = variants[nCurrentVariantIndex++];
 					if (skippedVariants.contains(variant))
 						continue;
 	
@@ -215,8 +215,6 @@ public class PlinkEigenstratTool {
 						skippedVariants.add(variant);
 					else
 						individualToGenotypeMap.put(sIndividual, eigenstratGtCodes.get(gtCode));
-					
-					nCurrentVariantIndex++;
 				}
 			}
 			catch (WrongNumberArgsException wnae)
