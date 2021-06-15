@@ -280,7 +280,8 @@ public class PlinkEigenstratTool {
 			nFoundSpaceCount++;
 		}
 		int nCurrentPos = nSpacePos - 3, nCurrentVariantIndex = -1;
-		while (nCurrentPos + 4 < sPlinkPedLine.length())
+		int nTrimmedPedLength = sPlinkPedLine.trim().length();
+		while (nCurrentPos + 4 < nTrimmedPedLength);
 		{
 			nCurrentPos += 4;
 			if (!redundantVariantIndexes.contains(nCurrentVariantIndex))	// otherwise it's a duplicate so we ignore it
